@@ -1,5 +1,6 @@
 const chains: Record<string, string> = {
   '420': '2020',
+  canto: '7700',
   eth: '1',
   exp: '2',
   rop: '3',
