@@ -24,6 +24,7 @@
   flex: 1;
   border: none;
   align-items: flex-start;
+  padding-left: 6%;
 }
 
 .logo svg {
