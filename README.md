@@ -1,4 +1,4 @@
-# <img src="https://user-images.githubusercontent.com/381895/186411381-e05075ff-7565-4b4e-925e-bb1e85cb165b.png" height="60" width="60" valign="middle" /> Safe Web Core
+# <img src="https://user-images.githubusercontent.com/381895/186411381-e05075ff-7565-4b4e-925e-bb1e85cb165b.png" height="60" width="60" valign="middle" /> Safe Web Core for Canto
 
 [![GitHub license](https://img.shields.io/github/license/safe-global/web-core)](https://github.com/safe-global/web-core/blob/main/LICENSE.md)
 ![tests](https://img.shields.io/github/workflow/status/safe-global/web-core/Unit%20tests/main?label=tests)
