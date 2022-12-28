@@ -7,11 +7,12 @@ import {
   SidebarListItemIcon,
   SidebarListItemText,
 } from '@/components/sidebar/SidebarList'
-import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
+// import { BEAMER_SELECTOR, loadBeamer } from '@/services/beamer'
+import { loadBeamer } from '@/services/beamer'
 import { useAppDispatch, useAppSelector } from '@/store'
 import { selectCookies, CookieType } from '@/store/cookiesSlice'
 import { openCookieBanner } from '@/store/popupSlice'
-import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
+// import BeamerIcon from '@/public/images/sidebar/whats-new.svg'
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
 import { ListItem } from '@mui/material'
 import DebugToggle from '../DebugToggle'
@@ -20,7 +21,8 @@ import Track from '@/components/common/Track'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
 import { useCurrentChain } from '@/hooks/useChains'
 
-const WHATS_NEW_PATH = 'https://help.safe.global/en/'
+// const WHATS_NEW_PATH = 'https://help.safe.global/en/'
+const REPORT_BUG_PATH = 'https://neobase.canny.io/safe-bug-reports'
 
 const SidebarFooter = (): ReactElement => {
   const dispatch = useAppDispatch()
@@ -50,7 +52,7 @@ const SidebarFooter = (): ReactElement => {
         </ListItem>
       )}
 
-      <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
+      {/* <Track {...OVERVIEW_EVENTS.WHATS_NEW}>
         <ListItem disablePadding>
           <SidebarListItemButton id={BEAMER_SELECTOR} onClick={handleBeamer}>
             <SidebarListItemIcon color="primary">
@@ -59,16 +61,16 @@ const SidebarFooter = (): ReactElement => {
             <SidebarListItemText bold>What&apos;s new</SidebarListItemText>
           </SidebarListItemButton>
         </ListItem>
-      </Track>
+      </Track> */}
 
       <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
         <ListItem disablePadding>
-          <a target="_blank" rel="noopener noreferrer" href={WHATS_NEW_PATH} style={{ width: '100%' }}>
+          <a target="_blank" rel="noopener noreferrer" href={REPORT_BUG_PATH} style={{ width: '100%' }}>
             <SidebarListItemButton>
               <SidebarListItemIcon color="primary">
                 <HelpCenterIcon />
               </SidebarListItemIcon>
-              <SidebarListItemText bold>Need help?</SidebarListItemText>
+              <SidebarListItemText bold>Report Bug</SidebarListItemText>
             </SidebarListItemButton>
           </a>
         </ListItem>
