@@ -4,6 +4,10 @@ import chains from '@/config/chains'
 import { parsePrefixedAddress } from '@/utils/addresses'
 import { prefixedAddressRe } from '@/utils/url'
 
+// import { IS_PRODUCTION } from '@/config/constants'
+// import { useAppSelector } from '@/store'
+//  import { selectSession } from '@/store/sessionSlice'
+
 const defaultChainId = chains.canto
 
 // Use the location object directly because Next.js's router.query is available only in an effect
@@ -39,6 +43,10 @@ export const useUrlChainId = (): string | undefined => {
 }
 
 export const useChainId = (): string => {
+  // const session = useAppSelector(selectSession)
+  // const urlChainId = useUrlChainId()
+  // return urlChainId || session.lastChainId || defaultChainId
+
   return defaultChainId
 }
 
