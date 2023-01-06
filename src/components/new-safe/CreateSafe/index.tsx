@@ -120,8 +120,8 @@ const CreateSafe = () => {
       ),
     },
     {
-      title: 'Select network and name your Safe',
-      subtitle: 'Select the network on which to create your Safe',
+      title: 'Select a name for your Safe',
+      subtitle: 'Select the name by which you want to identify your Safe',
       render: (data, onSubmit, onBack, setStep) => (
         <CreateSafeStep1 setSafeName={setSafeName} data={data} onSubmit={onSubmit} onBack={onBack} setStep={setStep} />
       ),
