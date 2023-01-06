@@ -87,7 +87,7 @@ function CreateSafeStep1({
             </Grid>
             <Grid item>
               <Box className={css.select}>
-              <ChainIndicator inline />
+                <ChainIndicator inline />
               </Box>
             </Grid>
           </Grid>

@@ -63,7 +63,7 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
       </div>
 
       <div className={classnames(css.element, css.networkSelector)}>
-      <ChainIndicator inline />
+        <ChainIndicator inline />
       </div>
     </Paper>
   )

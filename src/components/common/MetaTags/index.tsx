@@ -3,7 +3,7 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import palette from '@/styles/colors'
 import darkPalette from '@/styles/colors-dark'
 
-const descriptionText ='Canto Safe is a platform to manage digital assets on the CANTO Network.'
+const descriptionText = 'Canto Safe is a platform to manage digital assets on the CANTO Network.'
 const titleText = 'Canto Safe'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
