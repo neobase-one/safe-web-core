@@ -6,14 +6,14 @@ import classnames from 'classnames'
 import css from './styles.module.css'
 import ChainSwitcher from '@/components/common/ChainSwitcher'
 import ConnectWallet from '@/components/common/ConnectWallet'
-import NetworkSelector from '@/components/common/NetworkSelector'
 import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTokenWidget'
 import NotificationCenter from '@/components/notification-center/NotificationCenter'
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
-import SafeLogo from '@/public/images/logo.svg'
+import SafeLogo from '@/public/images/canto-safe-logo.svg'
 import Link from 'next/link'
 import useSafeAddress from '@/hooks/useSafeAddress'
+import ChainIndicator from '../ChainIndicator'
 
 type HeaderProps = {
   onMenuToggle: () => void
@@ -63,7 +63,7 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
       </div>
 
       <div className={classnames(css.element, css.networkSelector)}>
-        <NetworkSelector />
+        <ChainIndicator inline />
       </div>
     </Paper>
   )

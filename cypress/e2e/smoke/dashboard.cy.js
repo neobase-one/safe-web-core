@@ -59,16 +59,16 @@ describe('Dashboard', () => {
     })
   })
 
-  it('should show the Safe Apps Section', () => {
-    // Create an alias for the Safe Apps section
-    cy.contains('h2', 'Safe Apps').parents('section').as('safeAppsSection')
+  // it('should show the Safe Apps Section', () => {
+  //   // Create an alias for the Safe Apps section
+  //   cy.contains('h2', 'Safe Apps').parents('section').as('safeAppsSection')
 
-    cy.get('@safeAppsSection').contains('Explore Safe Apps')
+  //   cy.get('@safeAppsSection').contains('Explore Safe Apps')
 
-    // Regular safe apps
-    cy.get('@safeAppsSection').within(() => {
-      // Find exactly 5 Safe Apps cards inside the Safe Apps section
-      cy.get(`a[href^="/apps?safe=${encodeURIComponent(SAFE)}&appUrl=http"]`).should('have.length', 5)
-    })
-  })
+  //   // Regular safe apps
+  //   cy.get('@safeAppsSection').within(() => {
+  //     // Find exactly 5 Safe Apps cards inside the Safe Apps section
+  //     cy.get(`a[href^="/apps?safe=${encodeURIComponent(SAFE)}&appUrl=http"]`).should('have.length', 5)
+  //   })
+  // })
 })

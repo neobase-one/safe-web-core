@@ -33,7 +33,7 @@ export const ContractVersion = ({ isGranted }: { isGranted: boolean }) => {
         Contract version
       </Typography>
       {safe.version ? (
-        <ExternalLink href={safeMasterCopy?.deployerRepoUrl}>
+        <ExternalLink href={'https://github.com/neobase-one/safe-contracts'}>
           {safe.version}
           {getSafeVersionUpdate()}
         </ExternalLink>

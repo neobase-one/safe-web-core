@@ -11,7 +11,7 @@ const palette = {
   },
   secondary: {
     dark: '#0FDA6D',
-    main: '#12FF80',
+    main: '#06FC99',
     light: '#B0FFC9',
     background: '#EFFFF4',
   },
@@ -34,7 +34,7 @@ const palette = {
   },
   info: {
     dark: '#52BFDC',
-    main: '#5FDDFF',
+    main: '#06FC99',
     light: '#B7F0FF',
     background: '#EFFCFF',
   },

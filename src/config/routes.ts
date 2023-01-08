@@ -22,9 +22,9 @@ export const AppRoutes = {
     index: '/settings',
     data: '/settings/data',
     appearance: '/settings/appearance',
-    safeApps: {
-      index: '/settings/safe-apps',
-    },
+    // safeApps: {
+    //   index: '/settings/safe-apps',
+    // },
   },
   share: {
     safeApp: '/share/safe-app',

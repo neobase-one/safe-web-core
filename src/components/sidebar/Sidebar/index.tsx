@@ -3,7 +3,7 @@ import { Divider, Drawer, IconButton } from '@mui/material'
 import ChevronRight from '@mui/icons-material/ChevronRight'
 import { useRouter } from 'next/router'
 
-import ChainIndicator from '@/components/common/ChainIndicator'
+// import ChainIndicator from '@/components/common/ChainIndicator'
 import SidebarHeader from '@/components/sidebar/SidebarHeader'
 import SafeList from '@/components/sidebar/SafeList'
 import SidebarNavigation from '@/components/sidebar/SidebarNavigation'
@@ -27,7 +27,7 @@ const Sidebar = (): ReactElement => {
   return (
     <div className={css.container}>
       <div className={css.scroll}>
-        <ChainIndicator />
+        {/* <ChainIndicator /> */}
 
         <IconButton className={css.drawerButton} onClick={onDrawerToggle}>
           <ChevronRight />

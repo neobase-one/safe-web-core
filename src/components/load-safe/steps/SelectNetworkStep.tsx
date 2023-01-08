@@ -1,6 +1,6 @@
 import { Box, Button, Divider, Grid, Paper, Typography } from '@mui/material'
 import type { StepRenderProps } from '@/components/tx/TxStepper/useTxStepper'
-import NetworkSelector from '@/components/common/NetworkSelector'
+import ChainIndicator from '@/components/common/ChainIndicator'
 
 type Props = {
   onSubmit: StepRenderProps['onSubmit']
@@ -12,7 +12,7 @@ const SelectNetworkStep = ({ onSubmit, onBack }: Props) => {
     <Paper>
       <Box padding={3}>
         <Typography component="div">
-          Select network on which the Safe was created: <NetworkSelector />
+          Network on which the Safe was created: <ChainIndicator inline />
         </Typography>
       </Box>
       <Divider />

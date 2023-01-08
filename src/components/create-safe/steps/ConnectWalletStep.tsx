@@ -5,13 +5,13 @@ import ChainSwitcher from '@/components/common/ChainSwitcher'
 import WalletDetails from '@/components/common/ConnectWallet/WalletDetails'
 import PairingDetails from '@/components/common/PairingDetails'
 import { type ConnectedWallet } from '@/hooks/wallets/useOnboard'
-import NetworkSelector from '@/components/common/NetworkSelector'
 import useIsWrongChain from '@/hooks/useIsWrongChain'
 import { useCurrentChain } from '@/hooks/useChains'
 import { isPairingSupported } from '@/services/pairing/utils'
 
 import css from '@/components/create-safe/steps/styles.module.css'
 import useSetCreationStep from '@/components/create-safe/useSetCreationStep'
+import ChainIndicator from '@/components/common/ChainIndicator'
 
 export const ConnectWalletContent = ({
   wallet,
@@ -28,7 +28,7 @@ export const ConnectWalletContent = ({
       {wallet && !isWrongChain && <Typography mb={2}>Wallet connected</Typography>}
       {wallet ? (
         <Typography mb={2} component="div">
-          Creating a Safe on <NetworkSelector />
+          Creating a Safe on <ChainIndicator inline />
         </Typography>
       ) : (
         <>

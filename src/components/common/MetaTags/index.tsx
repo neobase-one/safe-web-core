@@ -3,16 +3,15 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import palette from '@/styles/colors'
 import darkPalette from '@/styles/colors-dark'
 
-const descriptionText =
-  'Safe (prev. Gnosis Safe) is the most trusted platform to manage digital assets on Ethereum and multiple EVMs. Over $40B secured.'
-const titleText = 'Safe'
+const descriptionText = 'Canto Safe is a platform to manage digital assets on the CANTO Network.'
+const titleText = 'Canto Safe'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
   <>
     <meta name="description" content={descriptionText} />
 
     {/* Social sharing */}
-    <meta name="og:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="og:image" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
     <meta name="twitter:card" content="summary_large_image" />
