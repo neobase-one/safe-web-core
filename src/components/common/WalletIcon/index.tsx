@@ -1,17 +1,17 @@
 import { Skeleton } from '@mui/material'
 import metamaskIcon from '@web3-onboard/injected-wallets/dist/icons/metamask'
-import coinbaseIcon from '@web3-onboard/coinbase/dist/icon'
-import keystoneIcon from '@web3-onboard/keystone/dist/icon'
-import walletConnectIcon from '@web3-onboard/walletconnect/dist/icon'
-import trezorIcon from '@web3-onboard/trezor/dist/icon'
-import ledgerIcon from '@web3-onboard/ledger/dist/icon'
-import tallyhoIcon from '@web3-onboard/tallyho/dist/icon'
-import fortmaticIcon from '@web3-onboard/fortmatic/dist/icon'
-import portisIcon from '@web3-onboard/portis/dist/icon'
-import torusIcon from '@web3-onboard/torus/dist/icon'
+// import coinbaseIcon from '@web3-onboard/coinbase/dist/icon'
+// import keystoneIcon from '@web3-onboard/keystone/dist/icon'
+// import walletConnectIcon from '@web3-onboard/walletconnect/dist/icon'
+// import trezorIcon from '@web3-onboard/trezor/dist/icon'
+// import ledgerIcon from '@web3-onboard/ledger/dist/icon'
+// import tallyhoIcon from '@web3-onboard/tallyho/dist/icon'
+// import fortmaticIcon from '@web3-onboard/fortmatic/dist/icon'
+// import portisIcon from '@web3-onboard/portis/dist/icon'
+// import torusIcon from '@web3-onboard/torus/dist/icon'
 
 import { WALLET_KEYS } from '@/hooks/wallets/wallets'
-import pairingIcon from '@/services/pairing/icon'
+//import pairingIcon from '@/services/pairing/icon'
 import { PAIRING_MODULE_LABEL } from '@/services/pairing/module'
 
 enum ADDITIONAL_KEYS {
@@ -26,22 +26,22 @@ type Props = {
 
 const WALLET_ICONS: Props = {
   [ADDITIONAL_KEYS.METAMASK]: metamaskIcon,
-  [WALLET_KEYS.COINBASE]: coinbaseIcon,
+  // [WALLET_KEYS.COINBASE]: coinbaseIcon,
   [WALLET_KEYS.INJECTED]: metamaskIcon,
-  [WALLET_KEYS.KEYSTONE]: keystoneIcon,
-  [WALLET_KEYS.WALLETCONNECT]: walletConnectIcon,
-  [WALLET_KEYS.TREZOR]: trezorIcon,
-  [WALLET_KEYS.LEDGER]: ledgerIcon,
-  [WALLET_KEYS.PAIRING]: pairingIcon,
-  [WALLET_KEYS.TALLYHO]: tallyhoIcon,
-  [WALLET_KEYS.FORTMATIC]: fortmaticIcon,
-  [WALLET_KEYS.PORTIS]: portisIcon,
-  [WALLET_KEYS.TORUS]: torusIcon,
+  // [WALLET_KEYS.KEYSTONE]: keystoneIcon,
+  // [WALLET_KEYS.WALLETCONNECT]: walletConnectIcon,
+  // [WALLET_KEYS.TREZOR]: trezorIcon,
+  // [WALLET_KEYS.LEDGER]: ledgerIcon,
+  // [WALLET_KEYS.PAIRING]: pairingIcon,
+  // [WALLET_KEYS.TALLYHO]: tallyhoIcon,
+  // [WALLET_KEYS.FORTMATIC]: fortmaticIcon,
+  // [WALLET_KEYS.PORTIS]: portisIcon,
+  // [WALLET_KEYS.TORUS]: torusIcon,
 }
 
 // Labels may differ from ALL_WALLET_KEYS
 const WALLET_LABELS: { [label: string]: WALLET_KEYS } = {
-  [PAIRING_MODULE_LABEL]: WALLET_KEYS.PAIRING,
+  [PAIRING_MODULE_LABEL]: WALLET_KEYS.INJECTED, //WALLET_KEYS.PAIRING,
 }
 
 const getWalletIcon = (provider: string) => {

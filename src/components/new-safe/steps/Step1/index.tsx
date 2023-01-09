@@ -5,15 +5,12 @@ import InfoIcon from '@/public/images/notifications/info.svg'
 import type { StepRenderProps } from '../../CardStepper/useCardStepper'
 import type { NewSafeFormData } from '../../CreateSafe'
 import useSyncSafeCreationStep from '@/components/new-safe/CreateSafe/useSyncSafeCreationStep'
-
-import css from './styles.module.css'
 import layoutCss from '@/components/new-safe/CreateSafe/styles.module.css'
 import useIsWrongChain from '@/hooks/useIsWrongChain'
 import NetworkWarning from '@/components/new-safe/NetworkWarning'
 import NameInput from '@/components/common/NameInput'
 import { CREATE_SAFE_EVENTS, trackEvent } from '@/services/analytics'
 import ExternalLink from '@/components/common/ExternalLink'
-import ChainIndicator from '@/components/common/ChainIndicator'
 
 type CreateSafeStep1Form = {
   name: string
@@ -84,11 +81,6 @@ function CreateSafeStep1({
                   ),
                 }}
               />
-            </Grid>
-            <Grid item>
-              <Box className={css.select}>
-                <ChainIndicator inline />
-              </Box>
             </Grid>
           </Grid>
           <Typography variant="body2" mt={2}>

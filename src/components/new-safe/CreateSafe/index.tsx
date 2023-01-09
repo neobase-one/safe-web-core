@@ -85,16 +85,6 @@ const staticHints: Record<
       },
     ],
   },
-  4: {
-    title: 'Safe usage',
-    variant: 'success',
-    steps: [
-      {
-        title: 'Connect your Safe',
-        text: 'In our Safe Apps section you can connect your Safe to over 70 dApps directly or via Wallet Connect to interact with any application.',
-      },
-    ],
-  },
 }
 
 const CreateSafe = () => {

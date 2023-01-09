@@ -50,7 +50,7 @@ export const getConnectedWallet = (wallets: WalletState[]): ConnectedWallet | nu
 }
 
 const getWalletConnectLabel = async ({ label, provider }: ConnectedWallet): Promise<string | undefined> => {
-  if (label.toUpperCase() !== WALLET_KEYS.WALLETCONNECT.toUpperCase()) return
+  if (label.toUpperCase() !== WALLET_KEYS.INJECTED.toUpperCase()) return //WALLET_KEYS.WALLETCONNECT
 
   const UNKNOWN_PEER = 'Unknown'
   const { default: WalletConnect } = await import('@walletconnect/client')
