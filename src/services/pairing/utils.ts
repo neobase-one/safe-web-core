@@ -24,7 +24,7 @@ export const killPairingSession = (connector: InstanceType<typeof WalletConnect>
 
   return connector.killSession()
 }
-
+//WALLET_KEYS.PAIRING
 export const isPairingSupported = (disabledWallets?: string[]) => {
-  return !!disabledWallets?.length && !disabledWallets.includes(CGW_NAMES[WALLET_KEYS.PAIRING] as string)
+  return !!disabledWallets?.length && !disabledWallets.includes(CGW_NAMES[WALLET_KEYS.INJECTED] as string)
 }
