@@ -65,7 +65,7 @@ const CookieBannerPopup = ({ warningKey }: { warningKey?: CookieType }): ReactEl
           label="Necessary"
         />
 
-        <FormControlLabel
+        {/* <FormControlLabel
           control={<Checkbox {...register(CookieType.UPDATES)} />}
           label="Updates (Beamer)"
           checked={watch(CookieType.UPDATES)}
@@ -75,14 +75,14 @@ const CookieBannerPopup = ({ warningKey }: { warningKey?: CookieType }): ReactEl
           control={<Checkbox {...register(CookieType.ANALYTICS)} />}
           label="Analytics"
           checked={watch(CookieType.ANALYTICS)}
-        />
+        /> */}
 
         <div className={css.grid}>
-          <Button onClick={handleAccept} variant="outlined" disableElevation>
+          {/* <Button onClick={handleAccept} variant="outlined" disableElevation>
             Accept selection
-          </Button>
+          </Button> */}
           <Button onClick={handleAcceptAll} variant="contained" disableElevation>
-            Accept all
+            Accept
           </Button>
         </div>
       </form>

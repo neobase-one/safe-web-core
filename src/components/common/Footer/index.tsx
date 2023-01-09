@@ -25,7 +25,9 @@ const Footer = (): ReactElement | null => {
     <footer className={css.container}>
       <ul>
         <li>
-          <Typography variant="caption">&copy;2022 Powered By NeoBase</Typography>
+          <Typography variant="subtitle2" color="#06FC99">
+            Powered By NeoBase
+          </Typography>
         </li>
       </ul>
     </footer>
