@@ -30,7 +30,6 @@ const DebugToggle = (): ReactElement => {
         control={<Switch checked={isDarkMode} onChange={(_, checked) => dispatch(setDarkMode(checked))} />}
         label="Dark mode"
       />
-      <FormControlLabel control={<Switch checked={isProdGateway} onChange={onToggle} />} label="Use prod CGW" />
     </Box>
   )
 }

@@ -13,7 +13,6 @@ import useChainId from '@/hooks/useChainId'
 import SafeLogo from '@/public/images/canto-safe-logo.svg'
 import Link from 'next/link'
 import useSafeAddress from '@/hooks/useSafeAddress'
-import ChainIndicator from '../ChainIndicator'
 
 type HeaderProps = {
   onMenuToggle: () => void
@@ -60,10 +59,6 @@ const Header = ({ onMenuToggle }: HeaderProps): ReactElement => {
 
       <div className={css.element}>
         <ConnectWallet />
-      </div>
-
-      <div className={classnames(css.element, css.networkSelector)}>
-        <ChainIndicator inline />
       </div>
     </Paper>
   )

@@ -1,8 +1,7 @@
 import { useState, type ReactElement, useMemo } from 'react'
-import { Button, Tooltip, Typography, SvgIcon } from '@mui/material'
+import { Button, Typography } from '@mui/material'
 import { type SafeBalanceResponse, TokenType } from '@safe-global/safe-gateway-typescript-sdk'
 import css from './styles.module.css'
-import FiatValue from '@/components/common/FiatValue'
 import TokenAmount from '@/components/common/TokenAmount'
 import TokenIcon from '@/components/common/TokenIcon'
 import EnhancedTable from '@/components/common/EnhancedTable'
@@ -11,7 +10,10 @@ import TokenTransferModal from '@/components/tx/modals/TokenTransferModal'
 import useIsGranted from '@/hooks/useIsGranted'
 import Track from '@/components/common/Track'
 import { ASSETS_EVENTS } from '@/services/analytics/events/assets'
-import InfoIcon from '@/public/images/notifications/info.svg'
+// Value Imports
+// import InfoIcon from '@/public/images/notifications/info.svg'
+// import FiatValue from '@/components/common/FiatValue'
+// import {Tooltip, SvgIcon } from '@mui/material'
 
 interface AssetsTableProps {
   items?: SafeBalanceResponse['items']
@@ -35,11 +37,11 @@ const AssetsTable = ({ items }: AssetsTableProps): ReactElement => {
         label: 'Balance',
         width: '20%',
       },
-      {
-        id: 'value',
-        label: 'Value',
-        width: '20%',
-      },
+      // {
+      //   id: 'value',
+      //   label: 'Value',
+      //   width: '20%',
+      // },
       {
         id: 'actions',
         label: '',
@@ -73,27 +75,28 @@ const AssetsTable = ({ items }: AssetsTableProps): ReactElement => {
           <TokenAmount value={item.balance} decimals={item.tokenInfo.decimals} tokenSymbol={item.tokenInfo.symbol} />
         ),
       },
-      value: {
-        rawValue: rawFiatValue,
-        content: (
-          <>
-            <FiatValue value={item.fiatBalance} />
-            {rawFiatValue === 0 && (
-              <Tooltip title="Value may be zero due to missing token price information" placement="top" arrow>
-                <span>
-                  <SvgIcon
-                    component={InfoIcon}
-                    inheritViewBox
-                    color="error"
-                    fontSize="small"
-                    sx={{ verticalAlign: 'middle', marginLeft: 0.5 }}
-                  />
-                </span>
-              </Tooltip>
-            )}
-          </>
-        ),
-      },
+      // Commenting out for future Value
+      // value: {
+      //   rawValue: rawFiatValue,
+      //   content: (
+      //     <>
+      //       <FiatValue value={item.fiatBalance} />
+      //       {rawFiatValue === 0 && (
+      //         <Tooltip title="Value may be zero due to missing token price information" placement="top" arrow>
+      //           <span>
+      //             <SvgIcon
+      //               component={InfoIcon}
+      //               inheritViewBox
+      //               color="error"
+      //               fontSize="small"
+      //               sx={{ verticalAlign: 'middle', marginLeft: 0.5 }}
+      //             />
+      //           </span>
+      //         </Tooltip>
+      //       )}
+      //     </>
+      //   ),
+      // },
       actions: {
         rawValue: '',
         sticky: true,
