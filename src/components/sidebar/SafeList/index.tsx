@@ -22,7 +22,7 @@ import { AppRoutes } from '@/config/routes'
 
 import css from './styles.module.css'
 import { sameAddress } from '@/utils/addresses'
-import ChainIndicator from '@/components/common/ChainIndicator'
+// import ChainIndicator from '@/components/common/ChainIndicator'
 import useSafeInfo from '@/hooks/useSafeInfo'
 import Track from '@/components/common/Track'
 import { OVERVIEW_EVENTS } from '@/services/analytics/events/overview'
@@ -112,7 +112,7 @@ const SafeList = ({ closeDrawer }: { closeDrawer: () => void }): ReactElement =>
         return (
           <Fragment key={chain.chainName}>
             {/* Chain indicator */}
-            <ChainIndicator chainId={chain.chainId} className={css.chainDivider} />
+            {/* <ChainIndicator chainId={chain.chainId} className={css.chainDivider} /> */}
 
             {/* No Safes yet */}
             {!addedSafeEntriesOnChain.length && !ownedSafesOnChain.length && (
