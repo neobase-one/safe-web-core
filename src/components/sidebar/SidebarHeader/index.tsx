@@ -79,13 +79,13 @@ const SafeHeader = (): ReactElement => {
               <EthHashInfo address={safeAddress} shortAddress showAvatar={false} />
             )}
 
-            <Typography variant="body2" fontWeight={700}>
+            {/* <Typography variant="body2" fontWeight={700}>
               {fiatTotal || <Skeleton variant="text" width={60} />}
-            </Typography>
+            </Typography> */}
           </div>
         </div>
 
-        <div className={css.iconButtons}>
+        <div className={css.iconButtons} style={{ justifyContent: 'space-evenly' }}>
           <Track {...OVERVIEW_EVENTS.SHOW_QR}>
             <QrCodeButton>
               <HeaderIconButton title="Open QR code">
