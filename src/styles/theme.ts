@@ -70,47 +70,75 @@ const initTheme = (darkMode: boolean) => {
       ...Array(20).fill('none'),
     ] as Shadows,
     typography: {
-      fontFamily: 'IBM Plex Mono, monospace',
       h1: {
         fontSize: '32px',
         lineHeight: '36px',
         fontWeight: 700,
+        fontFamily: 'Silkscreen',
       },
       h2: {
         fontSize: '27px',
         lineHeight: '34px',
         fontWeight: 700,
+        fontFamily: 'Silkscreen',
       },
       h3: {
         fontSize: '24px',
         lineHeight: '30px',
+        fontFamily: 'Silkscreen',
       },
       h4: {
         fontSize: '20px',
         lineHeight: '26px',
+        fontFamily: 'Silkscreen',
       },
       h5: {
         fontSize: '16px',
         fontWeight: 700,
+        fontFamily: 'Silkscreen',
+      },
+      h6: {
+        fontFamily: 'Silkscreen',
+      },
+      subtitle1: {
+        fontFamily: 'Silkscreen',
+      },
+      subtitle2: {
+        fontFamily: 'Silkscreen',
       },
       body1: {
         fontSize: '16px',
         lineHeight: '22px',
+        fontFamily: 'IBM Plex Mono',
       },
       body2: {
         fontSize: '14px',
         lineHeight: '20px',
+        fontFamily: 'IBM Plex Mono',
+      },
+      body3: {
+        fontSize: '14px',
+        lineHeight: '20px',
+        fontFamily: 'Silkscreen',
+      },
+      body4: {
+        fontSize: '14px',
+        lineHeight: '20px',
+        fontFamily: 'Silkscreen',
+        fontWeight: 700,
       },
       caption: {
         fontSize: '12px',
         lineHeight: '16px',
         letterSpacing: '0.4px',
+        fontFamily: 'Silkscreen',
       },
       overline: {
         fontSize: '11px',
         lineHeight: '14px',
         textTransform: 'uppercase',
         letterSpacing: '1px',
+        fontFamily: 'Silkscreen',
       },
     },
     components: {
@@ -119,6 +147,13 @@ const initTheme = (darkMode: boolean) => {
           head: ({ theme }) => ({
             ...theme.typography.body1,
             color: theme.palette.primary.light,
+          }),
+        },
+      },
+      MuiFormLabel: {
+        styleOverrides: {
+          root: ({ theme }) => ({
+            fontFamily: 'Silkscreen',
           }),
         },
       },
@@ -155,6 +190,7 @@ const initTheme = (darkMode: boolean) => {
             borderRadius: theme.shape.borderRadius,
             fontWeight: 'bold',
             lineHeight: 1.25,
+            fontFamily: 'Silkscreen',
             borderColor: theme.palette.primary.main,
             textTransform: 'none',
             '&:hover': {
@@ -340,6 +376,13 @@ const initTheme = (darkMode: boolean) => {
           root: ({ theme }) => ({
             color: theme.palette.text.primary,
             padding: '12px 16px',
+          }),
+        },
+      },
+      MuiTableSortLabel: {
+        styleOverrides: {
+          root: ({ theme }) => ({
+            fontFamily: 'Silkscreen',
           }),
         },
       },

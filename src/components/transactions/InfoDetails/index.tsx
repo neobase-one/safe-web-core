@@ -10,7 +10,7 @@ type InfoDetailsProps = {
 export const InfoDetails = ({ children, title }: InfoDetailsProps): ReactElement => (
   <div className={css.container}>
     <Typography>
-      <b>{title}</b>
+      <b style={{ fontFamily: 'Silkscreen' }}>{title}</b>
     </Typography>
     {children}
   </div>

@@ -13,9 +13,6 @@ const NewSafe = () => {
       <Typography variant="h1" mb={2}>
         Welcome to Canto Safe.
       </Typography>
-      <Typography variant="h4" mb={2}>
-        Here is how to get started:
-      </Typography>
       <Paper sx={{ padding: 3, maxWidth: '800px' }}>
         <Grid container gap={3}>
           <Grid item md={6}>

@@ -17,11 +17,11 @@ const TransferTxInfoSummary = ({ txInfo, txStatus }: TransferTxInfoProps) => {
 
   return (
     <Typography>
-      {direction === TransferDirection.INCOMING ? 'Received' : isTxQueued(txStatus) ? 'Send' : 'Sent'}{' '}
-      <b>
+      <b style={{ fontFamily: 'Silkscreen' }}>
+        {direction === TransferDirection.INCOMING ? 'Received' : isTxQueued(txStatus) ? 'Send' : 'Sent'}{' '}
         <TransferTx info={txInfo} withLogo={false} omitSign />
+        {direction === TransferDirection.INCOMING ? ' from:' : ' to:'}
       </b>
-      {direction === TransferDirection.INCOMING ? ' from:' : ' to:'}
     </Typography>
   )
 }
@@ -32,7 +32,7 @@ const TransferTxInfo = ({ txInfo, txStatus }: TransferTxInfoProps) => {
   return (
     <Box>
       <TransferTxInfoSummary txInfo={txInfo} txStatus={txStatus} />
-      <Box display="flex" alignItems="center">
+      <Box display="flex" alignItems="center" style={{ paddingTop: '0.5rem' }}>
         <EthHashInfo address={address} shortAddress={false} hasExplorer showCopyButton />
         <TransferActions address={address} txInfo={txInfo} />
       </Box>

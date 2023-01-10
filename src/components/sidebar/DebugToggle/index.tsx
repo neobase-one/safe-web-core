@@ -25,10 +25,11 @@ const DebugToggle = (): ReactElement => {
   }
 
   return (
-    <Box py={2} ml={2}>
+    <Box py={0} ml={2}>
       <FormControlLabel
         control={<Switch checked={isDarkMode} onChange={(_, checked) => dispatch(setDarkMode(checked))} />}
         label="Dark mode"
+        componentsProps={{ typography: { variant: 'body4' } }}
       />
     </Box>
   )

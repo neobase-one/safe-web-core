@@ -26,7 +26,7 @@ const ReviewRow = ({ name, value }: { name: string; value: ReactElement }) => {
   return (
     <>
       <Grid item xs={3}>
-        <Typography variant="body2">{name}</Typography>
+        <Typography variant="body3">{name}</Typography>
       </Grid>
       <Grid item xs={9}>
         {value}
