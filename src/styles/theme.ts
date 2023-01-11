@@ -126,7 +126,7 @@ const initTheme = (darkMode: boolean) => {
         fontFamily: 'Silkscreen',
       },
       body1: {
-        fontSize: '16px',
+        fontSize: '15px',
         lineHeight: '22px',
         fontFamily: 'IBM Plex Mono',
       },
