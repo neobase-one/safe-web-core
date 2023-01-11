@@ -64,7 +64,7 @@ export const SidebarListItemText = ({
   bold = false,
   ...rest
 }: ListItemTextProps & { bold?: boolean }): ReactElement => (
-  <ListItemText primaryTypographyProps={{ variant: 'body2', fontWeight: bold ? 700 : undefined }} {...rest}>
+  <ListItemText primaryTypographyProps={{ variant: 'body3', fontWeight: bold ? 700 : undefined }} {...rest}>
     {children}
   </ListItemText>
 )
