@@ -46,7 +46,7 @@ describe('Tx Modal', () => {
           cy.get('#address-book-input').should('be.visible')
 
           // Token selector
-          cy.contains('Select an asset*').should('be.visible')
+          cy.contains('Select asset*').should('be.visible')
 
           // Amount field
           cy.contains('Amount').should('be.visible')
@@ -66,7 +66,7 @@ describe('Tx Modal', () => {
 
       it('should have all tokens available in the token selector', () => {
         // Click on the Token selector
-        cy.contains('Select an asset*').click()
+        cy.contains('Select asset*').click()
 
         const ownedTokens = ['Dai', 'Wrapped Ether', 'Ether', 'Uniswap', 'Gnosis', '0x', 'USD Coin']
         ownedTokens.forEach((token) => {
