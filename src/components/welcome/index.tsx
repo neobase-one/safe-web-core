@@ -11,12 +11,12 @@ const NewSafe = () => {
   return (
     <>
       <Typography variant="h1" mb={2}>
-        Welcome to Canto Safe.
+        Welcome to Canto Safe
       </Typography>
       <Paper sx={{ padding: 3, maxWidth: '800px' }}>
         <Grid container gap={3}>
           <Grid item md={6}>
-            <Typography variant="h2" mb={1}>
+            <Typography variant="h3" mb={1}>
               Create Safe
             </Typography>
             <Typography mb={4}>
@@ -31,7 +31,7 @@ const NewSafe = () => {
             <Divider orientation="vertical" flexItem />
           </Grid>
           <Grid item md>
-            <Typography variant="h2" mb={1}>
+            <Typography variant="h3" mb={1}>
               Load Existing Safe
             </Typography>
             <Typography variant="body1" mb={4}>

@@ -522,7 +522,7 @@ const initTheme = (darkMode: boolean) => {
           tooltip: ({ theme }) => ({
             ...theme.typography.body2,
             color: theme.palette.background.main,
-            backgroundColor: theme.palette.text.primary,
+            backgroundColor: theme.palette.primary.main,
           }),
           arrow: ({ theme }) => ({
             color: theme.palette.text.primary,
