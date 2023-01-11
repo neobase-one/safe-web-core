@@ -90,19 +90,19 @@ const initTheme = (darkMode: boolean) => {
     ] as Shadows,
     typography: {
       h1: {
-        fontSize: '32px',
+        fontSize: '30px',
         lineHeight: '36px',
         fontWeight: 700,
         fontFamily: 'Silkscreen',
       },
       h2: {
-        fontSize: '27px',
+        fontSize: '25px',
         lineHeight: '34px',
         fontWeight: 700,
         fontFamily: 'Silkscreen',
       },
       h3: {
-        fontSize: '24px',
+        fontSize: '22px',
         lineHeight: '30px',
         fontFamily: 'Silkscreen',
       },
@@ -198,11 +198,11 @@ const initTheme = (darkMode: boolean) => {
         ],
         styleOverrides: {
           sizeSmall: {
-            fontSize: '14px',
+            fontSize: '13px',
             padding: '8px 24px',
           },
           sizeMedium: {
-            fontSize: '16px',
+            fontSize: '14px',
             padding: '12px 24px',
           },
           root: ({ theme }) => ({

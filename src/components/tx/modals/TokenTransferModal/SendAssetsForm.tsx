@@ -145,11 +145,11 @@ const SendAssetsForm = ({ onSubmit, formData, disableSpendingLimit = false }: Se
 
           <FormControl fullWidth>
             <InputLabel id="asset-label" required>
-              Select an asset
+              Select asset
             </InputLabel>
             <Select
               labelId="asset-label"
-              label={errors.tokenAddress?.message || 'Select an asset'}
+              label={errors.tokenAddress?.message || 'Select asset'}
               defaultValue={formData?.tokenAddress || ''}
               error={!!errors.tokenAddress}
               {...register(SendAssetsField.tokenAddress, {

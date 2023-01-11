@@ -86,11 +86,11 @@ export const SpendingLimitForm = ({ data, onSubmit }: Props) => {
 
           <FormControl fullWidth sx={{ mb: 2 }}>
             <InputLabel id="asset-label" required>
-              Select an asset
+              Select asset
             </InputLabel>
             <Select
               labelId="asset-label"
-              label={errors.tokenAddress?.message || 'Select an asset'}
+              label={errors.tokenAddress?.message || 'Select asset'}
               defaultValue={data?.tokenAddress || ''}
               error={!!errors.tokenAddress}
               {...register('tokenAddress', {
