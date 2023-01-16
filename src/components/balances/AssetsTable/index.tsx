@@ -63,7 +63,7 @@ const AssetsTable = ({ items }: AssetsTableProps): ReactElement => {
           <div className={css.token}>
             <TokenIcon logoUri={item.tokenInfo.logoUri} tokenSymbol={item.tokenInfo.symbol} />
 
-            <Typography>{item.tokenInfo.name}</Typography>
+            <Typography>{item.tokenInfo.symbol}</Typography>
 
             {item.tokenInfo.type !== TokenType.NATIVE_TOKEN && <TokenExplorerLink address={item.tokenInfo.address} />}
           </div>
