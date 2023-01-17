@@ -14,11 +14,11 @@ const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
     <meta name="og:image" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@safe" />
+    <meta name="twitter:card" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
+    <meta name="twitter:site" content="@neobase-one" />
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={descriptionText} />
-    <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" />
+    <meta name="twitter:image" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
 
     {/* CSP */}
     <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
