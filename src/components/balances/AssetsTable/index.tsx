@@ -10,7 +10,7 @@ import TokenTransferModal from '@/components/tx/modals/TokenTransferModal'
 import useIsGranted from '@/hooks/useIsGranted'
 import Track from '@/components/common/Track'
 import { ASSETS_EVENTS } from '@/services/analytics/events/assets'
-Value Imports
+// Value Imports
 import InfoIcon from '@/public/images/notifications/info.svg'
 import FiatValue from '@/components/common/FiatValue'
 import { Tooltip, SvgIcon } from '@mui/material'
