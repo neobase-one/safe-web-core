@@ -9,8 +9,15 @@ const OwnedSafes = (): ReactElement | null => {
   const allOwnedSafes = useOwnedSafes()
   const ownedSafesOnChain = chain ? allOwnedSafes[chain.chainId] : undefined
 
-  if (!chain || !ownedSafesOnChain?.length) {
+  if (!chain) {
     return null
+  }
+  if (chain && !ownedSafesOnChain?.length) {
+    return (
+      <Typography variant="body2" display="inline" color="primary.light" textAlign="center" mt={1} mb={2}>
+        No Safes Added Yet
+      </Typography>
+    )
   }
 
   return (
