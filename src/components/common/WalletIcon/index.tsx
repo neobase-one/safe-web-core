@@ -2,7 +2,7 @@ import { Skeleton } from '@mui/material'
 import metamaskIcon from '@web3-onboard/injected-wallets/dist/icons/metamask'
 // import coinbaseIcon from '@web3-onboard/coinbase/dist/icon'
 // import keystoneIcon from '@web3-onboard/keystone/dist/icon'
-// import walletConnectIcon from '@web3-onboard/walletconnect/dist/icon'
+import walletConnectIcon from '@web3-onboard/walletconnect/dist/icon'
 // import trezorIcon from '@web3-onboard/trezor/dist/icon'
 // import ledgerIcon from '@web3-onboard/ledger/dist/icon'
 // import tallyhoIcon from '@web3-onboard/tallyho/dist/icon'
@@ -29,7 +29,7 @@ const WALLET_ICONS: Props = {
   // [WALLET_KEYS.COINBASE]: coinbaseIcon,
   [WALLET_KEYS.INJECTED]: metamaskIcon,
   // [WALLET_KEYS.KEYSTONE]: keystoneIcon,
-  // [WALLET_KEYS.WALLETCONNECT]: walletConnectIcon,
+  [WALLET_KEYS.WALLETCONNECT]: walletConnectIcon,
   // [WALLET_KEYS.TREZOR]: trezorIcon,
   // [WALLET_KEYS.LEDGER]: ledgerIcon,
   // [WALLET_KEYS.PAIRING]: pairingIcon,
