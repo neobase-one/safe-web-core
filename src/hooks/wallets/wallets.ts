@@ -2,7 +2,7 @@ import {
   CYPRESS_MNEMONIC,
   // TREZOR_APP_URL,
   // TREZOR_EMAIL,
-  // WC_BRIDGE,
+  WC_BRIDGE,
   // FORTMATIC_KEY,
   // PORTIS_KEY,
 } from '@/config/constants'
@@ -20,7 +20,7 @@ import { EMPTY_DATA } from '@safe-global/safe-core-sdk/dist/src/utils/constants'
 // import keystoneModule from '@web3-onboard/keystone/dist/index'
 // import ledgerModule from '@web3-onboard/ledger'
 // import trezorModule from '@web3-onboard/trezor'
-// import walletConnect from '@web3-onboard/walletconnect'
+import walletConnect from '@web3-onboard/walletconnect'
 // import tallyhoModule from '@web3-onboard/tallyho'
 // import fortmaticModule from '@web3-onboard/fortmatic'
 // import portisModule from '@web3-onboard/portis'
@@ -34,7 +34,7 @@ export const enum WALLET_KEYS {
   // LEDGER = 'LEDGER',
   // PAIRING = 'PAIRING',
   // TREZOR = 'TREZOR',
-  // WALLETCONNECT = 'WALLETCONNECT',
+  WALLETCONNECT = 'WALLETCONNECT',
   // TALLYHO = 'TALLYHO',
   // FORTMATIC = 'FORTMATIC',
   // PORTIS = 'PORTIS',
@@ -48,7 +48,7 @@ export const CGW_NAMES: { [key in WALLET_KEYS]: string | undefined } = {
   // [WALLET_KEYS.LEDGER]: 'ledger',
   // [WALLET_KEYS.PAIRING]: 'safeMobile',
   // [WALLET_KEYS.TREZOR]: 'trezor',
-  // [WALLET_KEYS.WALLETCONNECT]: 'walletConnect',
+  [WALLET_KEYS.WALLETCONNECT]: 'walletConnect',
   // [WALLET_KEYS.TALLYHO]: 'tally',
   // [WALLET_KEYS.FORTMATIC]: 'fortmatic',
   // [WALLET_KEYS.PORTIS]: 'portis',
@@ -58,7 +58,7 @@ export const CGW_NAMES: { [key in WALLET_KEYS]: string | undefined } = {
 const WALLET_MODULES: { [key in WALLET_KEYS]: () => WalletInit } = {
   [WALLET_KEYS.INJECTED]: injectedWalletModule,
   // [WALLET_KEYS.PAIRING]: pairingModule,
-  // [WALLET_KEYS.WALLETCONNECT]: () => walletConnect({ bridge: WC_BRIDGE }),
+  [WALLET_KEYS.WALLETCONNECT]: () => walletConnect({ bridge: WC_BRIDGE }),
   // [WALLET_KEYS.LEDGER]: ledgerModule,
   // [WALLET_KEYS.TREZOR]: () => trezorModule({ appUrl: TREZOR_APP_URL, email: TREZOR_EMAIL }),
   // [WALLET_KEYS.KEYSTONE]: keystoneModule,
@@ -101,7 +101,7 @@ export const isHardwareWallet = (wallet: ConnectedWallet): boolean => {
 }
 
 export const isWalletConnect = (wallet: ConnectedWallet): boolean => {
-  return wallet.label.toUpperCase() === WALLET_KEYS.INJECTED //WALLET_KEYS.WALLETCONNECT
+  return wallet.label.toUpperCase() === WALLET_KEYS.WALLETCONNECT //WALLET_KEYS.INJECTED
 }
 export const isSafeMobileWallet = (wallet: ConnectedWallet): boolean => {
   return wallet.label === PAIRING_MODULE_LABEL
