@@ -88,8 +88,6 @@ const WebCoreApp = ({ Component, pageProps, emotionCache = clientSideEmotionCach
 
       <CacheProvider value={emotionCache}>
         <AppProviders>
-          <SpeedInsights />
-          <Analytics />
           <CssBaseline />
 
           <InitApp />
@@ -105,6 +103,8 @@ const WebCoreApp = ({ Component, pageProps, emotionCache = clientSideEmotionCach
           <Notifications />
         </AppProviders>
       </CacheProvider>
+      <SpeedInsights debug={false} />
+      <Analytics debug={false} />
     </StoreHydrator>
   )
 }
