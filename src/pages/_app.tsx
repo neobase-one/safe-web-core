@@ -34,8 +34,6 @@ import MetaTags from '@/components/common/MetaTags'
 import useABTesting from '@/services/tracking/useABTesting'
 import { AbTest } from '@/services/tracking/abTesting'
 import PsaBanner from '@/components/common/PsaBanner'
-import { Analytics } from '@vercel/analytics/react'
-import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const GATEWAY_URL = IS_PRODUCTION || cgwDebugStorage.get() ? GATEWAY_URL_PRODUCTION : GATEWAY_URL_STAGING
 
@@ -103,8 +101,6 @@ const WebCoreApp = ({ Component, pageProps, emotionCache = clientSideEmotionCach
           <Notifications />
         </AppProviders>
       </CacheProvider>
-      <SpeedInsights debug={false} />
-      <Analytics debug={false} />
     </StoreHydrator>
   )
 }
