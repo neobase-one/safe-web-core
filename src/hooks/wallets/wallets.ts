@@ -74,3 +74,4 @@ export const isSocialWalletEnabled = (chain: ChainInfo | undefined): boolean => 
 
   return chain.disabledWallets.every((label) => label !== CGW_NAMES.SOCIAL_LOGIN)
 }
+export default WALLET_KEYS

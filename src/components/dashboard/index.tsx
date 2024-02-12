@@ -18,6 +18,7 @@ const RecoveryWidget = dynamic(() => import('@/features/recovery/components/Reco
 const Dashboard = (): ReactElement => {
   const router = useRouter()
   const { [CREATION_MODAL_QUERY_PARM]: showCreationModal = '' } = router.query
+  console.log('kml')
 
   const supportsRecovery = useIsRecoverySupported()
   const [recovery] = useRecovery()

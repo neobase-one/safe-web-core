@@ -43,7 +43,7 @@ export const createOnboard = (
 
     appMetadata: {
       name: 'Safe{Wallet}',
-      icon: location.origin + '/images/logo-round.svg',
+      icon: location.origin + '/images/canto_logo.svg',
       description: 'Safe{Wallet} – smart contract wallet for Ethereum (ex-Gnosis Safe multisig)',
     },
 

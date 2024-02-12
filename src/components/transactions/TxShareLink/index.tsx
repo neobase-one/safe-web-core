@@ -22,6 +22,7 @@ const TxShareLink = ({ id }: { id: string }): ReactElement => {
     try {
       // copy href to clipboard
       navigator.clipboard.writeText(location.origin + href)
+      window.open(location.origin + href, '_blank')
     } catch (error) {
       console.error(error)
       setIsCopyEnabled(false)

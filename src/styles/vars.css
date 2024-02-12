@@ -8,7 +8,7 @@
   --color-primary-main: #121312;
   --color-primary-light: #636669;
   --color-secondary-dark: #0fda6d;
-  --color-secondary-main: #12ff80;
+  --color-secondary-main: #06fc99;
   --color-secondary-light: #b0ffc9;
   --color-secondary-background: #effff4;
   --color-border-main: #a1a3a7;
@@ -21,9 +21,9 @@
   --color-success-dark: #028d4c;
   --color-success-main: #00b460;
   --color-success-light: #72f5b8;
-  --color-success-background: #effaf1;
+  --color-success-background: #f2fff9;
   --color-info-dark: #52bfdc;
-  --color-info-main: #5fddff;
+  --color-info-main: #06fc99;
   --color-info-light: #b7f0ff;
   --color-info-background: #effcff;
   --color-warning-dark: #cd674e;
@@ -57,11 +57,11 @@
   --color-text-secondary: #636669;
   --color-text-disabled: #636669;
   --color-primary-dark: #0cb259;
-  --color-primary-main: #12ff80;
+  --color-primary-main: #06fc99;
   --color-primary-light: #a1a3a7;
   --color-secondary-dark: #636669;
   --color-secondary-main: #ffffff;
-  --color-secondary-light: #12ff80;
+  --color-secondary-light: #06fc99;
   --color-secondary-background: #303033;
   --color-border-main: #636669;
   --color-border-light: #303033;
@@ -75,7 +75,7 @@
   --color-success-light: #81c784;
   --color-success-background: #1f2920;
   --color-info-dark: #52bfdc;
-  --color-info-main: #5fddff;
+  --color-info-main: #06fc99;
   --color-info-light: #b7f0ff;
   --color-info-background: #19252c;
   --color-warning-dark: #cd674e;
@@ -99,11 +99,11 @@
     --color-text-secondary: #636669;
     --color-text-disabled: #636669;
     --color-primary-dark: #0cb259;
-    --color-primary-main: #12ff80;
+    --color-primary-main: #06fc99;
     --color-primary-light: #a1a3a7;
     --color-secondary-dark: #636669;
     --color-secondary-main: #ffffff;
-    --color-secondary-light: #12ff80;
+    --color-secondary-light: #06fc99;
     --color-secondary-background: #303033;
     --color-border-main: #636669;
     --color-border-light: #303033;
@@ -117,7 +117,7 @@
     --color-success-light: #81c784;
     --color-success-background: #1f2920;
     --color-info-dark: #52bfdc;
-    --color-info-main: #5fddff;
+    --color-info-main: #06fc99;
     --color-info-light: #b7f0ff;
     --color-info-background: #19252c;
     --color-warning-dark: #cd674e;

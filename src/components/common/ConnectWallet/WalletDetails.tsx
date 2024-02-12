@@ -10,7 +10,7 @@ const SocialSigner = dynamic(() => import('@/components/common/SocialSigner'), {
 
 import WalletLogin from '@/components/welcome/WelcomeLogin/WalletLogin'
 
-const WalletDetails = ({ onConnect }: { onConnect: () => void }): ReactElement => {
+const WalletDetails: any = ({ onConnect }: { onConnect: () => void }): ReactElement => {
   return (
     <>
       <Box my={1} display="flex" justifyContent="center">

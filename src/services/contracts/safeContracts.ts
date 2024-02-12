@@ -142,3 +142,15 @@ export const getReadOnlySignMessageLibContract = async (
     ..._getValidatedGetContractProps(safeVersion),
   })
 }
+
+// export const getFallbackHandlerContractInstance = (
+//   chainId: string,
+//   safeVersion: string = LATEST_SAFE_VERSION,
+// ): CompatibilityFallbackHandlerEthersContract => {
+//   const ethAdapter = createEthersAdapter()
+
+//   return ethAdapter.getCompatibilityFallbackHandlerContract({
+//     singletonDeployment: getFallbackHandlerContractDeployment(chainId),
+//     ..._getValidatedGetContractProps(chainId, safeVersion),
+//   })
+// }

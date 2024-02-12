@@ -11,7 +11,8 @@ import SafeTokenWidget, { getSafeTokenAddress } from '@/components/common/SafeTo
 import NotificationCenter from '@/components/notification-center/NotificationCenter'
 import { AppRoutes } from '@/config/routes'
 import useChainId from '@/hooks/useChainId'
-import SafeLogo from '@/public/images/logo.svg'
+// import SafeLogo from '@/public/images/logo.svg'
+import SafeLogo from '@/public/images/canto-safe-logo.svg'
 import Link from 'next/link'
 import useSafeAddress from '@/hooks/useSafeAddress'
 import BatchIndicator from '@/components/batch/BatchIndicator'
@@ -19,6 +20,7 @@ import WalletConnect from '@/features/walletconnect/components'
 import { PushNotificationsBanner } from '@/components/settings/PushNotifications/PushNotificationsBanner'
 import { FEATURES } from '@/utils/chains'
 import { useHasFeature } from '@/hooks/useChains'
+// import ChainIndicator from '../ChainIndicator'
 
 type HeaderProps = {
   onMenuToggle?: Dispatch<SetStateAction<boolean>>
@@ -58,8 +60,13 @@ const Header = ({ onMenuToggle, onBatchToggle }: HeaderProps): ReactElement => {
       </div>
 
       <div className={classnames(css.element, css.hideMobile, css.logo)}>
-        <Link href={logoHref} passHref>
+        <Link
+          href={logoHref}
+          passHref
+          style={{ filter: 'invert(1)', padding: 10, display: 'flex', alignItems: 'center' }}
+        >
           <SafeLogo alt="Safe logo" />
+          <span style={{ color: '#000', fontWeight: 600, fontSize: 20 }}>{'{Wallet}'}</span>
         </Link>
       </div>
 
@@ -91,7 +98,7 @@ const Header = ({ onMenuToggle, onBatchToggle }: HeaderProps): ReactElement => {
         <ConnectWallet />
       </div>
 
-      <div className={classnames(css.element, css.networkSelector)}>
+      <div className={classnames(css.element, css.networkSelector)} style={{ position: 'relative' }}>
         <NetworkSelector />
       </div>
     </Paper>

@@ -25,6 +25,9 @@ export const AppRoutes = {
     load: '/new-safe/load',
     create: '/new-safe/create',
   },
+  safeApps: {
+    index: '/settings/safe-apps',
+  },
   settings: {
     setup: '/settings/setup',
     securityLogin: '/settings/security-login',

@@ -33,7 +33,7 @@ const WcProposalForm = ({ proposal, onApprove, onReject }: ProposalFormProps): R
   const { isScam, origin } = proposal.verifyContext.verified
   const url = proposer.metadata.url || origin
 
-  const chainIds = useMemo(() => getSupportedChainIds(configs, proposal.params), [configs, proposal.params])
+  const chainIds = useMemo(() => getSupportedChainIds(configs, proposal.params as any), [configs, proposal.params])
   const isUnsupportedChain = !chainIds.includes(chainId)
 
   const name = getPeerName(proposer) || 'Unknown dApp'

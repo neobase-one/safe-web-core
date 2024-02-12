@@ -3,24 +3,28 @@ import { ContentSecurityPolicy, StrictTransportSecurity } from '@/config/securit
 import lightPalette from '@/components/theme/lightPalette'
 import darkPalette from '@/components/theme/darkPalette'
 
-const descriptionText =
-  'Safe (prev. Gnosis Safe) is the most trusted platform to manage digital assets on Ethereum and multiple EVMs. Over $40B secured.'
-const titleText = 'Safe{Wallet}'
+const descriptionText = 'Canto Safe is a platform to manage digital assets on the CANTO Network.'
+const titleText = 'Canto Safe'
 
 const MetaTags = ({ prefetchUrl }: { prefetchUrl: string }) => (
   <>
     <meta name="description" content={descriptionText} />
 
     {/* Social sharing */}
-    <meta name="og:image" content="https://app.safe.global/images/social-share.png" />
+    {/* <meta name="og:image" content="https://app.safe.global/images/social-share.png" /> */}
+    <meta name="og:image" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
     <meta name="og:description" content={descriptionText} />
     <meta name="og:title" content={titleText} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@safe" />
     <meta name="twitter:title" content={titleText} />
     <meta name="twitter:description" content={descriptionText} />
-    <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" />
-
+    {/* <meta name="twitter:image" content="https://app.safe.global/images/social-share.png" /> */}
+    <meta name="twitter:card" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
+    <meta name="twitter:site" content="@neobase-one" />
+    <meta name="twitter:title" content={titleText} />
+    <meta name="twitter:description" content={descriptionText} />
+    <meta name="twitter:image" content="https://pbs.twimg.com/media/FhoXXaiVsAARUXW?format=jpg&name=large" />
     {/* CSP */}
     <meta httpEquiv="Content-Security-Policy" content={ContentSecurityPolicy} />
     {IS_PRODUCTION && <meta httpEquiv="Strict-Transport-Security" content={StrictTransportSecurity} />}

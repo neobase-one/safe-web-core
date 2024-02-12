@@ -1,17 +1,17 @@
-import { type ReactElement, useMemo, useContext } from 'react'
-import { Button, Tooltip, Typography, SvgIcon, IconButton, Box, Checkbox, Skeleton } from '@mui/material'
+import { type ReactElement, useMemo, useContext, useState } from 'react'
+import { Button, Skeleton, Typography } from '@mui/material'
 import type { TokenInfo } from '@safe-global/safe-gateway-typescript-sdk'
 import { TokenType } from '@safe-global/safe-gateway-typescript-sdk'
 import css from './styles.module.css'
-import FiatValue from '@/components/common/FiatValue'
+
 import TokenAmount from '@/components/common/TokenAmount'
 import TokenIcon from '@/components/common/TokenIcon'
 import EnhancedTable, { type EnhancedTableProps } from '@/components/common/EnhancedTable'
 import TokenExplorerLink from '@/components/common/TokenExplorerLink'
 import Track from '@/components/common/Track'
 import { ASSETS_EVENTS } from '@/services/analytics/events/assets'
-import InfoIcon from '@/public/images/notifications/info.svg'
-import { VisibilityOutlined } from '@mui/icons-material'
+
+// import { VisibilityOutlined } from '@mui/icons-material'
 import TokenMenu from '../TokenMenu'
 import useBalances from '@/hooks/useBalances'
 import useHiddenTokens from '@/hooks/useHiddenTokens'
@@ -21,6 +21,11 @@ import useSpendingLimit from '@/hooks/useSpendingLimit'
 import { TxModalContext } from '@/components/tx-flow'
 import { TokenTransferFlow } from '@/components/tx-flow/flows'
 import NoAssets from './NoAssets'
+
+// Value Imports
+import InfoIcon from '@/public/images/notifications/info.svg'
+import FiatValue from '@/components/common/FiatValue'
+import { Tooltip, SvgIcon } from '@mui/material'
 
 const skeletonCells: EnhancedTableProps['rows'][0]['cells'] = {
   asset: {
@@ -125,6 +130,7 @@ const AssetsTable = ({
   const hiddenAssets = useHiddenTokens()
   const { balances, loading } = useBalances()
   const { setTxFlow } = useContext(TxModalContext)
+  const [selectedAsset, setSelectedAsset] = useState<string | undefined>()
 
   const { isAssetSelected, toggleAsset, hidingAsset, hideAsset, cancel, deselectAll, saveChanges } = useHideAssets(() =>
     setShowHiddenAssets(false),
@@ -165,7 +171,7 @@ const AssetsTable = ({
                 <div className={css.token}>
                   <TokenIcon logoUri={item.tokenInfo.logoUri} tokenSymbol={item.tokenInfo.symbol} />
 
-                  <Typography>{item.tokenInfo.name}</Typography>
+                  <Typography>{item.tokenInfo.symbol}</Typography>
 
                   {!isNative && <TokenExplorerLink address={item.tokenInfo.address} />}
                 </div>
@@ -213,27 +219,37 @@ const AssetsTable = ({
               sticky: true,
               collapsed: item.tokenInfo.address === hidingAsset,
               content: (
-                <Box display="flex" flexDirection="row" gap={1} alignItems="center">
-                  <>
-                    <SendButton tokenInfo={item.tokenInfo} onClick={() => onSendClick(item.tokenInfo.address)} />
+                <Track {...ASSETS_EVENTS.SEND}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="small"
+                    onClick={() => setSelectedAsset(item.tokenInfo.address)}
+                  >
+                    Send
+                  </Button>
+                </Track>
+                // <Box display="flex" flexDirection="row" gap={1} alignItems="center">
+                //   <>
+                //     <SendButton tokenInfo={item.tokenInfo} onClick={() => onSendClick(item.tokenInfo.address)} />
 
-                    {showHiddenAssets ? (
-                      <Checkbox size="small" checked={isSelected} onClick={() => toggleAsset(item.tokenInfo.address)} />
-                    ) : (
-                      <Track {...ASSETS_EVENTS.HIDE_TOKEN}>
-                        <Tooltip title="Hide asset" arrow disableInteractive>
-                          <IconButton
-                            disabled={hidingAsset !== undefined}
-                            size="medium"
-                            onClick={() => hideAsset(item.tokenInfo.address)}
-                          >
-                            <VisibilityOutlined fontSize="small" />
-                          </IconButton>
-                        </Tooltip>
-                      </Track>
-                    )}
-                  </>
-                </Box>
+                //     {showHiddenAssets ? (
+                //       <Checkbox size="small" checked={isSelected} onClick={() => toggleAsset(item.tokenInfo.address)} />
+                //     ) : (
+                //       <Track {...ASSETS_EVENTS.HIDE_TOKEN}>
+                //         <Tooltip title="Hide asset" arrow disableInteractive>
+                //           <IconButton
+                //             disabled={hidingAsset !== undefined}
+                //             size="medium"
+                //             onClick={() => hideAsset(item.tokenInfo.address)}
+                //           >
+                //             <VisibilityOutlined fontSize="small" />
+                //           </IconButton>
+                //         </Tooltip>
+                //       </Track>
+                //     )}
+                //   </>
+                // </Box>
               ),
             },
           },
